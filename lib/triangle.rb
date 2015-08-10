@@ -6,6 +6,6 @@ class Triangle
   end
 
   define_method(:is_valid?) do
-    ((@a**2)+(@b**2)==(@c**2))
+    ((@a+@b) > @c) && ((@a+@c)>@b) && ((@b+@c)>@a)
   end
 end
