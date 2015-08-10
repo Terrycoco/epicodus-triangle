@@ -17,4 +17,12 @@ describe(Triangle) do
       expect(test_triangle.is_valid?()).to(eq(true))
     end
   end
+
+  describe('#type') do
+    it("accepts 3 equal sides of triangle and returns that it is an equilateral triangle") do
+      test_triangle = Triangle.new(1,1,1)
+      expect(test_triangle.type()).to(eq("equilateral"))
+    end
+  end
+
 end
