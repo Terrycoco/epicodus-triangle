@@ -13,7 +13,12 @@ class Triangle
     if self.is_valid?()
       if @a == @b && @b == @c
         "equilateral"
+      elsif (@a == @b) || (@a == @c) || (@b == @c)
+        "isosceles"
+      else
+        "scalene"
       end
+
     else
       "Triangle not valid"
     end
